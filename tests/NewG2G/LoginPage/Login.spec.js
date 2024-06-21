@@ -16,5 +16,5 @@ test('Login @login', async ({page})=>
    await dropDown.selectOption({value: 'BRITISH'});
    await page.waitForTimeout(2000);
    await page.locator("//button[@id='login-button']").click();
-   await page.waitForTimeout(3000);
+   await page.waitForTimeout(30000);
 });
