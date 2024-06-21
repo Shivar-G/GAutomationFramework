@@ -20,7 +20,7 @@ test('Contact Info @contact', async ({page})=>
     await page.locator("//a[normalize-space()='Ross Dalziel (4/9)']").click();
     await page.waitForTimeout(10000);
     await page.locator("//a[normalize-space()='Contact Information']").click();
-    await page.waitForTimeout(3000);
+    //await page.waitForTimeout(3000);
     await page.locator("//input[@name='account_email']").click();
     await page.locator("//input[@name='Home']").click();
     await page.locator("//input[@name='address.country']").click();
