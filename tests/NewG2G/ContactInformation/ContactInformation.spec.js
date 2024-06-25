@@ -14,11 +14,11 @@ test('Contact Info @contact', async ({page})=>
     await page.locator("#year").fill("1975");
     const dropDown = page.locator('#nationality');
     await dropDown.selectOption({value: 'BRITISH'});
-    await page.waitForTimeout(2000);
+    //await page.waitForTimeout(2000);
     await page.locator("//button[@id='login-button']").click();
-    await page.waitForTimeout(3000);
+    //await page.waitForTimeout(3000);
     await page.locator("//a[normalize-space()='Ross Dalziel (4/9)']").click();
-    await page.waitForTimeout(10000);
+    //await page.waitForTimeout(10000);
     await page.locator("//a[normalize-space()='Contact Information']").click();
     //await page.waitForTimeout(3000);
     await page.locator("//input[@name='account_email']").click();

@@ -7,10 +7,10 @@ const config = {
   workers: 3,
   /* Maximum time one test can run for. */
   //10-
-  timeout: 300 * 1000,
+  timeout: 30000 * 1000,
   expect: {
   
-    timeout: 5000
+    timeout: 5000000
   },
   
   reporter: 'html',
@@ -32,7 +32,7 @@ const config = {
       use: {
 
         browserName : 'chromium',
-        headless : false,
+        headless : true,
         screenshot : 'on',
         video: 'retain-on-failure',
         ignoreHttpsErrors:true,

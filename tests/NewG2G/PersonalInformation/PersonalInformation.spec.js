@@ -4,7 +4,7 @@ const {test, expect} = require('@playwright/test');
 
 
 
-test('Passenger @name', async ({page})=>
+test('Personal Information @personal', async ({page})=>
 {
     await page.goto("http://127.0.0.1:8000/g2g/login/");
     const element = page.locator('#month');
@@ -17,6 +17,7 @@ test('Passenger @name', async ({page})=>
     await page.waitForTimeout(2000);
     await page.locator("//button[@id='login-button']").click();
     await page.waitForTimeout(3000);
-    await page.locator("(//a[normalize-space()='Ross Dalziel (4/9)'])[1]").click();
-    //await page.waitForTimeout(10000);
+    await page.locator("//a[normalize-space()='Ross Dalziel (4/9)']").click();
+    await page.waitForTimeout(10000);
+    await page.locator("//a[normalize-space()='Personal Information']").click();
 });
